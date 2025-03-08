@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Tools - FloryId Academy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tools.css">
+    <link rel="stylesheet" href="new-animations.css">
+    <link rel="stylesheet" href="loader.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+    </div>
+    <nav>
+        <div class="logo">FloryId Academy</div>
+        <div class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="materi.html"><i class="fas fa-book"></i> Materials</a></li>
+            <li><a href="tools.html" class="active"><i class="fas fa-tools"></i> Tools</a></li>
+            <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="tools-container">
+        <h1>Alat Pengujian Keamanan</h1>
+        <div class="disclaimer">
+            <p>⚠️ Hanya untuk Tujuan Pendidikan: Alat-alat ini hanya boleh digunakan pada sistem yang Anda memiliki izin untuk menguji.</p>
+        </div>
+
+        <div class="tool-section">
+            <h2>Alat-alat Penting untuk Pengujian Keamanan</h2>
+            
+            <div class="tool-card">
+                <img src="https://cdn3d.iconscout.com/3d/premium/thumb/bug-bounty-6973568-5713656.png" alt="Burp Suite">
+                <h3>Burp Suite</h3>
+                <p>Platform pengujian keamanan web yang lengkap untuk menemukan kerentanan dalam aplikasi web.</p>
+                <div class="tool-features">
+                    <h4>Fitur Utama:</h4>
+                    <ul>
+                        <li>Proxy untuk menangkap dan memodifikasi permintaan HTTP</li>
+                        <li>Scanner otomatis untuk menemukan kerentanan umum</li>
+                        <li>Repeater untuk pengujian manual</li>
+                        <li>Intruder untuk pengujian penetrasi otomatis</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tool-card">
+                <img src="https://cdn3d.iconscout.com/3d/premium/thumb/cyber-security-5130519-4292739.png" alt="Nmap">
+                <h3>Nmap</h3>
+                <p>Alat pemindai jaringan yang kuat untuk menemukan host dan layanan dalam jaringan.</p>
+                <div class="tool-features">
+                    <h4>Kegunaan:</h4>
+                    <ul>
+                        <li>Pemindaian port untuk menemukan layanan yang berjalan</li>
+                        <li>Deteksi sistem operasi target</li>
+                        <li>Pemindaian kerentanan dasar</li>
+                        <li>Pemetaan topologi jaringan</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tool-card">
+                <img src="https://cdn3d.iconscout.com/3d/premium/thumb/security-testing-5130522-4292742.png" alt="Metasploit">
+                <h3>Metasploit Framework</h3>
+                <p>Platform pengujian penetrasi yang memungkinkan pengujian keamanan komprehensif.</p>
+                <div class="tool-features">
+                    <h4>Kemampuan:</h4>
+                    <ul>
+                        <li>Koleksi exploit yang luas</li>
+                        <li>Pengembangan exploit kustom</li>
+                        <li>Post-exploitation tools</li>
+                        <li>Pengujian keamanan otomatis</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 FloryId Academy. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="tools-animations.js"></script>
+    <script>
+        window.addEventListener('load', function() {
+            document.body.classList.add('loaded');
+        });
+    </script>
+</body>
+</html>

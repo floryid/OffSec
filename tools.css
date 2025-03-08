@@ -1,0 +1,81 @@
+.tools-container {
+    margin-top: 80px;
+    padding: 2rem 5%;
+}
+
+.tools-container h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.disclaimer {
+    background: #fff3cd;
+    color: #856404;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.tool-section {
+    margin-bottom: 3rem;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tool-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.tool-card {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tool-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.tool-card h3 {
+    background: #1a1a1a;
+    color: #00ff00;
+    padding: 1rem;
+    margin: 0;
+}
+
+.tool-content {
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.tool-description h4,
+.tool-examples h4 {
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+}
+
+.tool-description ol,
+.tool-examples ul {
+    padding-left: 1.5rem;
+}
+
+.tool-description li,
+.tool-examples li {
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .tool-content {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - FloryId Academy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="new-animations.css">
+    <link rel="stylesheet" href="loader.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+    </div>
+    <nav>
+        <div class="logo">FloryId Academy</div>
+        <div class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="materi.html"><i class="fas fa-book"></i> Materials</a></li>
+            <li><a href="tools.html"><i class="fas fa-tools"></i> Tools</a></li>
+            <li><a href="about.html" class="active"><i class="fas fa-info-circle"></i> About</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="about-container">
+        <section class="about-hero animate-on-scroll">
+            <h1>Tentang FloryId Academy</h1>
+            <p>Memberdayakan generasi berikutnya dari ethical hacker dan profesional keamanan siber</p>
+        </section>
+
+        <section class="mission animate-on-scroll">
+            <h2>Misi Kami</h2>
+            <p>Di FloryId Academy, kami berkomitmen untuk menyediakan pendidikan berkualitas tinggi dalam ethical hacking dan keamanan siber. Tujuan kami adalah menciptakan dunia digital yang lebih aman dengan melatih profesional keamanan yang bertanggung jawab yang dapat melindungi organisasi dari ancaman siber.</p>
+        </section>
+
+        <section class="values animate-on-scroll">
+            <h2>Nilai-Nilai Kami</h2>
+            <div class="values-grid">
+                <div class="value-card animate-on-scroll">
+                    <h3>Keunggulan</h3>
+                    <p>Kami berusaha untuk mencapai keunggulan dalam segala hal yang kami lakukan, dari konten kursus hingga metode pengajaran.</p>
+                </div>
+                <div class="value-card animate-on-scroll">
+                    <h3>Etika</h3>
+                    <p>Kami menekankan praktik etis dan pengungkapan yang bertanggung jawab dalam semua program pelatihan kami.</p>
+                </div>
+                <div class="value-card animate-on-scroll">
+                    <h3>Inovasi</h3>
+                    <p>Kami selalu mengikuti tren dan teknologi keamanan terbaru untuk memberikan pendidikan yang terdepan.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="team animate-on-scroll">
+            <h2>Tim Kami</h2>
+            <div class="team-grid">
+                <div class="team-member animate-on-scroll">
+                    <img src="https://cdn3d.iconscout.com/3d/premium/thumb/male-avatar-5728758-4781059.png" alt="Anggota Tim">
+                    <h3>John Doe</h3>
+                    <p>Instruktur Utama</p>
+                    <p>Certified Ethical Hacker dengan pengalaman lebih dari 10 tahun di bidang keamanan siber.</p>
+                </div>
+                <div class="team-member animate-on-scroll">
+                    <img src="https://cdn3d.iconscout.com/3d/premium/thumb/female-avatar-5728757-4781058.png" alt="Anggota Tim">
+                    <h3>Jane Smith</h3>
+                    <p>Peneliti Keamanan</p>
+                    <p>Ahli dalam keamanan web dan bug bounty hunting.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 FloryId Academy. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="scroll-animations.js"></script>
+    <script>
+        window.addEventListener('load', function() {
+            document.body.classList.add('loaded');
+        });
+    </script>
+</body>
+</html>

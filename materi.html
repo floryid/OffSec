@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Materials - FloryId Academy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="materi.css">
+    <link rel="stylesheet" href="new-animations.css">
+    <link rel="stylesheet" href="loader.css">
+    <link rel="stylesheet" href="typewriter.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+    </div>
+    <nav>
+        <div class="logo">FloryId Academy</div>
+        <div class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="materi.html" class="active"><i class="fas fa-book"></i> Materials</a></li>
+            <li><a href="tools.html"><i class="fas fa-tools"></i> Tools</a></li>
+            <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="materials-container">
+        <h1 class="typewriter">Materi Pembelajaran</h1>
+        
+        <div class="module animate-on-scroll">
+            <h2>Modul 1: Pengenalan Ethical Hacking</h2>
+            <div class="lessons">
+                <div class="lesson-card animate-on-scroll">
+                    <h3>1.1 Apa itu Ethical Hacking?</h3>
+                    <p>Pelajari dasar-dasar dan pentingnya ethical hacking</p>
+                    <a href="#" class="lesson-btn">Mulai Belajar</a>
+                </div>
+                <div class="lesson-card animate-on-scroll">
+                    <h3>1.2 Aspek Hukum</h3>
+                    <p>Memahami kerangka hukum dalam ethical hacking</p>
+                    <a href="#" class="lesson-btn">Mulai Belajar</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="module animate-on-scroll">
+            <h2>Modul 2: Dasar-dasar Bug Bounty</h2>
+            <div class="lessons">
+                <div class="lesson-card animate-on-scroll">
+                    <h3>2.1 Platform Bug Bounty</h3>
+                    <p>Pengenalan platform bug bounty populer</p>
+                    <a href="#" class="lesson-btn">Mulai Belajar</a>
+                </div>
+                <div class="lesson-card animate-on-scroll">
+                    <h3>2.2 Penulisan Laporan</h3>
+                    <p>Cara menulis laporan bug yang efektif</p>
+                    <a href="#" class="lesson-btn">Mulai Belajar</a>
+                </div>
+            </div>
+        </div>
+        <div class="module animate-on-scroll">
+            <h2>Modul 3: Cyber Kill Chain</h2>
+            <div class="lessons">
+                <div class="lesson-card animate-on-scroll">
+                    <h3>3.1 Memahami Cyber Kill Chain</h3>
+                    <p>Cyber Kill Chain adalah model yang menjelaskan tahapan serangan siber:</p>
+                    <ul class="kill-chain-list">
+                        <li><strong>Reconnaissance:</strong> Mengumpulkan informasi tentang target melalui berbagai metode seperti OSINT, pemindaian jaringan, dan rekayasa sosial.</li>
+                        <li><strong>Weaponization:</strong> Mempersiapkan exploit dan payload berbahaya yang disesuaikan untuk menarget kerentanan.</li>
+                        <li><strong>Delivery:</strong> Mengirimkan payload yang telah dipersiapkan ke target melalui metode seperti email phishing atau situs web yang telah disusupi.</li>
+                        <li><strong>Exploitation:</strong> Mengeksekusi kode exploit untuk memanfaatkan kerentanan.</li>
+                        <li><strong>Installation:</strong> Menginstal malware atau backdoor untuk akses berkelanjutan.</li>
+                        <li><strong>Command & Control:</strong> Membangun saluran komunikasi untuk kontrol sistem jarak jauh.</li>
+                        <li><strong>Actions on Objectives:</strong> Mencapai tujuan serangan seperti pencurian data atau kerusakan sistem.</li>
+                    </ul>
+                    <a href="#" class="lesson-btn">Mulai Belajar</a>
+                </div>
+                <div class="lesson-card animate-on-scroll">
+                    <h3>3.2 Contoh Praktis</h3>
+                    <p>Contoh nyata dan studi kasus Cyber Kill Chain dalam aksi:</p>
+                    <div class="example-box">
+                        <h4>Contoh: Serangan Aplikasi Web</h4>
+                        <ul>
+                            <li><strong>Reconnaissance:</strong> Menggunakan tools seperti Shodan untuk mengidentifikasi server web yang rentan</li>
+                            <li><strong>Weaponization:</strong> Membuat payload SQL injection</li>
+                            <li><strong>Delivery:</strong> Mengirimkan input berbahaya melalui form web</li>
+                            <li><strong>Exploitation:</strong> Mengeksekusi SQL injection untuk mengakses database</li>
+                            <li><strong>Installation:</strong> Mengunggah web shell untuk akses berkelanjutan</li>
+                            <li><strong>C2:</strong> Menggunakan web shell untuk mengontrol server</li>
+                            <li><strong>Actions:</strong> Mengekstrak data sensitif</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="lesson-btn">Mulai Belajar</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 FloryId Academy. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="scroll-animations.js"></script>
+    <script>
+        window.addEventListener('load', function() {
+            document.body.classList.add('loaded');
+        });
+    </script>
+</body>
+</html>

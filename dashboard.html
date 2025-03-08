@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offensive Security</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="new-animations.css">
+    <link rel="stylesheet" href="loader.css">
+    <link rel="stylesheet" href="matrix-rain.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+    </div>
+    <nav>
+        <div class="logo">FloryId Academy</div>
+        <div class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="dashboard.html"><i class="fas fa-book"></i> OffSec</a></li>
+            <li><a href="materi.html"><i class="fas fa-book"></i> Materials</a></li>
+            <li><a href="tools.html"><i class="fas fa-tools"></i> Tools</a></li>
+            <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section id="recon" class="animate-on-scroll">
+            <h2>Information Gathering (Reconnaissance)</h2>
+            <p>Mengumpulkan informasi tentang target sebelum eksploitasi.</p>
+        </section>
+        
+        <section id="scanning" class="animate-on-scroll">
+            <h2>Scanning & Enumeration</h2>
+            <p>Menemukan layanan dan celah keamanan yang dapat dieksploitasi.</p>
+        </section>
+        
+        <section id="exploitation" class="animate-on-scroll">
+            <h2>Exploitation (Penetration Testing)</h2>
+            <p>Mengeksploitasi celah keamanan yang ditemukan.</p>
+        </section>
+        
+        <section id="privilege" class="animate-on-scroll">
+            <h2>Privilege Escalation</h2>
+            <p>Meningkatkan akses dari user biasa ke administrator/root.</p>
+        </section>
+        
+        <section id="post" class="animate-on-scroll">
+            <h2>Post-Exploitation</h2>
+            <p>Mempertahankan akses ke sistem yang telah dikompromikan.</p>
+        </section>
+        
+        <section id="reporting" class="animate-on-scroll">
+            <h2>Reporting & Documentation</h2>
+            <p>Melaporkan temuan dan memberikan rekomendasi perbaikan.</p>
+        </section>
+
+        <section id="dirsearch" class="animate-on-scroll">
+            <h2>Penggunaan Dirsearch</h2>
+            <p>Dirsearch adalah alat yang digunakan untuk menemukan direktori dan file tersembunyi di sebuah website.</p>
+            <h3>Instalasi</h3>
+            <pre><code>git clone https://github.com/maurosoria/dirsearch.git
+    cd dirsearch
+    pip install -r requirements.txt</code></pre>
+            <h3>Penggunaan Dasar</h3>
+            <pre><code>python3 dirsearch.py -u http://target.com -e php,html,txt</code></pre>
+            <h3>Penggunaan Lanjutan</h3>
+            <pre><code>python3 dirsearch.py -u http://target.com -e php,html,txt -t 50 -w wordlist.txt</code></pre>
+            <p>Opsi tambahan:</p>
+            <ul>
+                <li><code>-u</code> : URL target</li>
+                <li><code>-e</code> : Ekstensi file yang akan dicari</li>
+                <li><code>-t</code> : Jumlah thread</li>
+                <li><code>-w</code> : Wordlist yang digunakan</li>
+            </ul>
+        </section>
+    </main>
+    
+   
+    </main>
+
+    <footer>
+        <p>&copy; 2025 FloryId Academy - Dibuat oleh Nofrinto Flory</p>
+    </footer>
+    
+    <script src="script.js"></script>
+    <script src="matrix-rain.js"></script>
+    <script>
+        window.addEventListener('load', function() {
+            document.body.classList.add('loaded');
+        });
+    </script>
+    <script src="scroll-animations.js"></script>
+</body>
+</html>

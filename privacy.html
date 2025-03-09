@@ -159,34 +159,88 @@
 
     <main class="privacy-container">
         <section class="privacy-hero">
-            <h1>Privacy Policy</h1>
-            <p>Understanding how we protect your data and maintain security</p>
+            <h1>Kebijakan Privasi</h1>
+            <p>Memahami bagaimana kami melindungi data Anda dan menjaga keamanan</p>
         </section>
 
         <div class="privacy-section animate-on-scroll">
-            <button class="collapsible">Data Collection and Usage</button>
+            <button class="collapsible">Pengumpulan dan Penggunaan Data</button>
             <div class="content">
                 <div class="content-inner">
-                    <p>We collect and process your data in accordance with industry standards and best practices. This includes:</p>
+                    <p>Kami mengumpulkan dan memproses data Anda sesuai dengan standar industri dan praktik terbaik. Ini termasuk:</p>
                     <ul>
-                        <li>Personal information provided during registration</li>
-                        <li>Learning progress and course completion data</li>
-                        <li>Technical information for service improvement</li>
+                        <li>Informasi pribadi yang diberikan saat pendaftaran</li>
+                        <li>Data kemajuan pembelajaran dan penyelesaian kursus</li>
+                        <li>Informasi teknis untuk peningkatan layanan</li>
                     </ul>
                 </div>
             </div>
         </div>
 
         <div class="privacy-section animate-on-scroll">
-            <button class="collapsible">Security Measures</button>
+            <button class="collapsible">Langkah-langkah penyimpanan keylogger</button>
             <div class="content">
                 <div class="content-inner">
-                    <p>We implement various security measures to protect your data:</p>
+                    <h4>Panduan Instalasi Aman</h4>
+                    <p>Ikuti langkah-langkah berikut untuk penerapan keylogger yang tepat:</p>
+                    
+                    <h5>1. Pengaturan Awal</h5>
                     <ul>
-                        <li>End-to-end encryption for sensitive data</li>
-                        <li>Regular security audits and updates</li>
-                        <li>Secure data storage and transmission</li>
+                        <li>Buat direktori khusus di lokasi yang aman</li>
+                        <li>Atur izin file yang sesuai</li>
+                        <li>Konfigurasi variabel lingkungan sistem</li>
                     </ul>
+
+                    <h5>2. File Structure</h5>
+                    <pre><code>secure_deployment/
+├── keylogger.py
+├── config.json
+├── requirements.txt
+└── logs/
+    ├── encrypted_log.bin
+    ├── screenshots/
+    └── clipboard/</code></pre>
+
+                    <h5>3. Dependencies Installation</h5>
+                    <pre><code>pip install -r requirements.txt</code></pre>
+
+                    <h5>4. Konfigurasi Penyimpanan Aman</h5>
+                    <ul>
+                        <li>Gunakan penyimpanan terenkripsi untuk data sensitif</li>
+                        <li>Terapkan penghapusan file secara aman</li>
+                        <li>Konfigurasi kebijakan rotasi log</li>
+                        <li>Siapkan mekanisme backup yang aman</li>
+                    </ul>
+
+                    <h5>5. Langkah-langkah Penerapan</h5>
+                    <ol>
+                        <li>Verifikasi kompatibilitas sistem</li>
+                        <li>Konfigurasi kunci enkripsi</li>
+                        <li>Siapkan jaringan yang aman</li>
+                        <li>Aktifkan mekanisme persistence</li>
+                        <li>Terapkan kontrol akses</li>
+                    </ol>
+
+                    <div class="warning-box">
+                        <h4>Praktik Keamanan Terbaik:</h4>
+                        <ul>
+                            <li>Gunakan enkripsi yang kuat untuk semua data tersimpan</li>
+                            <li>Terapkan saluran komunikasi yang aman</li>
+                            <li>Pembaruan dan patch keamanan secara rutin</li>
+                            <li>Pantau penggunaan sumber daya sistem</li>
+                            <li>Terapkan mekanisme fail-safe</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-box">
+                        <h4>Catatan Penting:</h4>
+                        <ul>
+                            <li>Selalu ikuti kebijakan keamanan lokal</li>
+                            <li>Jaga dokumentasi penerapan yang detail</li>
+                            <li>Audit keamanan rutin diperlukan</li>
+                            <li>Simpan backup file konfigurasi</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -292,21 +346,21 @@
                         <li><strong>log_rotation</strong>: Rotasi file log otomatis</li>
                     </ul>
                     <div class="warning-box">
-                        <h4>Important Security Considerations:</h4>
+                        <h4>Pertimbangan Keamanan Penting:</h4>
                         <ul>
-                            <li>Encryption keys must be stored securely and never exposed in the code</li>
-                            <li>Server endpoints should use HTTPS for secure transmission</li>
-                            <li>Implement proper access controls on the receiving server</li>
-                            <li>Regular security audits are recommended</li>
+                            <li>Kunci enkripsi harus disimpan dengan aman dan tidak boleh terekspos dalam kode</li>
+                            <li>Endpoint server harus menggunakan HTTPS untuk transmisi yang aman</li>
+                            <li>Terapkan kontrol akses yang tepat pada server penerima</li>
+                            <li>Audit keamanan rutin direkomendasikan</li>
                         </ul>
                     </div>
                     <div class="info-box">
-                        <h4>Legal and Ethical Guidelines:</h4>
+                        <h4>Pedoman Hukum dan Etika:</h4>
                         <ul>
-                            <li>Use only in controlled testing environments</li>
-                            <li>Obtain proper authorization before deployment</li>
-                            <li>Comply with local computer monitoring laws</li>
-                            <li>Maintain user privacy and data protection standards</li>
+                            <li>Gunakan hanya dalam lingkungan pengujian yang terkontrol</li>
+                            <li>Dapatkan otorisasi yang tepat sebelum penerapan</li>
+                            <li>Patuhi hukum pemantauan komputer lokal</li>
+                            <li>Jaga standar privasi pengguna dan perlindungan data</li>
                         </ul>
                     </div>
                 </div>

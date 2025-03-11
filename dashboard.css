@@ -1,36 +1,43 @@
 /* Dashboard specific styles */
 main {
     padding-top: 80px;
-    background: rgba(26, 26, 26, 0.95);
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.95), rgba(38, 38, 38, 0.95));
     min-height: 100vh;
     color: #fff;
 }
 
 section {
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    margin-bottom: 2rem;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
+    margin: 2rem auto;
+    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 255, 0, 0.1);
+    transition: all 0.4s ease-in-out;
 }
 
 section:hover {
     transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 255, 0, 0.15);
+    border-color: rgba(0, 255, 0, 0.3);
 }
 
 h2 {
     color: #00ff00;
-    margin-bottom: 1rem;
-    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
 }
 
 p {
     font-size: 1.1rem;
-    line-height: 1.6;
+    line-height: 1.8;
     color: #f0f0f0;
+    margin-bottom: 1rem;
 }
 
 /* Responsive adjustments */
@@ -40,14 +47,17 @@ p {
     }
 
     section {
-        padding: 1.5rem;
+        padding: 2rem;
+        margin: 1.5rem auto;
     }
 
     h2 {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
+        margin-bottom: 1.2rem;
     }
 
     p {
         font-size: 1rem;
+        line-height: 1.6;
     }
 }

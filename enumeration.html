@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vulnerability Enumeration - FloryId Academy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tools.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .page-header {
+            padding: 1rem 2rem;
+            background: rgba(0, 0, 0, 0.8);
+        }
+        
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(-5px);
+        }
+        
+        .back-button i {
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="page-header">
+        <a href="index.html" class="back-button"><i class="fas fa-arrow-left"></i> Back to Home</a>
+    </header>
+    <main class="content-wrapper">
+        <section class="enumeration-guide">
+            <h1>Panduan Lengkap Vulnerability Enumeration</h1>
+            
+            <div class="intro-section">
+                <h2>Apa itu Vulnerability Enumeration?</h2>
+                <p>Vulnerability Enumeration adalah proses sistematis untuk mengidentifikasi dan mengkategorikan kerentanan potensial dalam sistem atau jaringan. Proses ini merupakan bagian penting dari security assessment dan penetration testing.</p>
+            </div>
+
+            <div class="methodology-section">
+                <h2>Metodologi Enumeration</h2>
+                
+                <div class="method-card">
+                    <h3>1. Pengumpulan Informasi Dasar</h3>
+                    <div class="code-example">
+                        <h4>Pemindaian Host Aktif:</h4>
+                        <pre><code># Mendeteksi host aktif dalam jaringan
+nmap -sn 192.168.1.0/24
+
+# Pemindaian TCP SYN pada port umum
+nmap -sS -F 192.168.1.100</code></pre>
+                        <p class="explanation">Perintah pertama melakukan ping sweep untuk menemukan host aktif, sedangkan perintah kedua melakukan pemindaian cepat port-port umum menggunakan teknik SYN.</p>
+                    </div>
+                </div>
+
+                <div class="method-card">
+                    <h3>2. Service Enumeration</h3>
+                    <div class="code-example">
+                        <h4>Deteksi Versi Layanan:</h4>
+                        <pre><code># Pemindaian versi layanan detail
+nmap -sV -sC -p- 192.168.1.100
+
+# Pemindaian spesifik untuk web server
+nmap -sV -p 80,443 --script=http-enum 192.168.1.100</code></pre>
+                        <p class="explanation">Opsi -sV mendeteksi versi layanan, -sC menjalankan script default, dan -p- memindai semua port. Script http-enum khusus untuk enumerasi web server.</p>
+                    </div>
+                </div>
+
+                <div class="method-card">
+                    <h3>3. Vulnerability Assessment</h3>
+                    <div class="code-example">
+                        <h4>Pemindaian Kerentanan:</h4>
+                        <pre><code># Pemindaian kerentanan umum
+nmap --script vuln 192.168.1.100
+
+# Pemindaian kerentanan spesifik
+nmap -p 445 --script smb-vuln* 192.168.1.100</code></pre>
+                        <p class="explanation">Script vuln mencari berbagai kerentanan umum, sedangkan smb-vuln* fokus pada kerentanan protokol SMB.</p>
+                    </div>
+                </div>
+
+                <div class="method-card">
+                    <h3>4. Advanced Enumeration</h3>
+                    <div class="code-example">
+                        <h4>Teknik Lanjutan:</h4>
+                        <pre><code># Pemindaian SSL/TLS
+nmap -p 443 --script ssl-enum-ciphers 192.168.1.100
+
+# Enumerasi DNS
+nmap -p 53 --script dns-brute 192.168.1.100
+
+# Deteksi WAF dan IDS
+nmap --script http-waf-detect 192.168.1.100</code></pre>
+                        <p class="explanation">Teknik lanjutan ini membantu mengidentifikasi masalah keamanan spesifik seperti konfigurasi SSL yang lemah, subdomain tersembunyi, dan keberadaan firewall aplikasi web.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="best-practices">
+                <h2>Praktik Terbaik dan Keamanan</h2>
+                <ul>
+                    <li>Selalu dapatkan izin tertulis sebelum melakukan pemindaian</li>
+                    <li>Gunakan timing template yang sesuai (-T0 sampai -T5) untuk menghindari overload target</li>
+                    <li>Dokumentasikan semua temuan dengan baik</li>
+                    <li>Perhatikan kebijakan keamanan dan regulasi yang berlaku</li>
+                    <li>Lakukan pemindaian bertahap, mulai dari yang paling dasar</li>
+                </ul>
+            </div>
+
+            <div class="practical-scenarios">
+                <h2>Skenario Praktis</h2>
+                
+                <div class="scenario-card">
+                    <h3>Skenario 1: Audit Keamanan Web Server</h3>
+                    <pre><code># Langkah 1: Pemindaian port web
+nmap -p 80,443 -sV 192.168.1.100
+
+# Langkah 2: Enumerasi direktori web
+nmap --script http-enum 192.168.1.100
+
+# Langkah 3: Cek kerentanan SSL
+nmap --script ssl-heartbleed,ssl-poodle 192.168.1.100
+
+# Langkah 4: Cek misconfiguration
+nmap --script http-config-backup 192.168.1.100</code></pre>
+                </div>
+
+                <div class="scenario-card">
+                    <h3>Skenario 2: Database Server Assessment</h3>
+                    <pre><code># Langkah 1: Deteksi database service
+nmap -p 1433,3306,5432 -sV 192.168.1.100
+
+# Langkah 2: Cek kerentanan umum
+nmap --script=mysql-vuln* -p 3306 192.168.1.100
+
+# Langkah 3: Enumerasi user database
+nmap --script=mysql-users -p 3306 192.168.1.100</code></pre>
+                </div>
+            </div>
+
+            <div class="warning-box">
+                <h3>⚠️ Peringatan Penting</h3>
+                <p>Teknik-teknik ini hanya boleh digunakan untuk tujuan pembelajaran dan pengujian pada sistem yang Anda memiliki izin resmi untuk menguji. Penggunaan tanpa izin dapat melanggar hukum.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="tools-animations.js"></script>
+</body>
+</html>

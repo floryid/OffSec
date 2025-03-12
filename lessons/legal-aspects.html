@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Aspects of Ethical Hacking - FloryId Academy</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../new-animations.css">
+    <link rel="stylesheet" href="../loader.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .lesson-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: rgba(0, 0, 0, 0.85);
+            min-height: 100vh;
+        }
+        .lesson-section {
+            margin-bottom: 40px;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(10px);
+        }
+        .lesson-section p {
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #ffffff;
+            font-size: 1.1rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+        }
+        .key-points {
+            background: rgba(0, 0, 0, 0.85);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 25px 0;
+            box-shadow: 0 4px 12px rgba(0, 255, 0, 0.2);
+            border: 1px solid rgba(0, 255, 0, 0.2);
+        }
+        .example-box {
+            background: rgba(0, 0, 0, 0.95);
+            border-left: 4px solid #00ff00;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 4px 12px rgba(0, 255, 0, 0.2);
+        }
+        .law-card {
+            background: rgba(0, 0, 0, 0.9);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+            border: 1px solid rgba(0, 255, 0, 0.3);
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .example-box ul li{
+            color: #ffffff;
+            list-style: numeric;
+        }
+        .lesson-section h1 {
+            color: #00ff00;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+        }
+        .lesson-section h2 {
+            color: #00ff00;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+        .lesson-section p {
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #ffffff;
+            font-size: 1.1rem;
+        }
+        .key-points {
+            background: rgba(0, 255, 0, 0.15);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 25px 0;
+            box-shadow: 0 4px 12px rgba(0, 255, 0, 0.1);
+        }
+        .key-points h3 {
+            color: #00ff00;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        .key-points ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .key-points li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+            color: #ffffff;
+            font-size: 1.1rem;
+        }
+        .key-points li:before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #00ff00;
+            font-weight: bold;
+        }
+        .example-box {
+            background: rgba(0, 0, 0, 0.95);
+            border-left: 4px solid #00ff00;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 4px 12px rgba(0, 255, 0, 0.2);
+        }
+        .example-box h3 {
+            color: #00ff00;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 8px rgba(0, 255, 0, 0.4);
+        }
+        .example-box p {
+            color: #ffffff;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+        }
+        .law-card {
+            background: rgba(0, 0, 0, 0.9);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+            border: 1px solid rgba(0, 255, 0, 0.3);
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px rgb(6, 242, 34);
+            color: #ffffff;
+        }
+        .law-card:hover {
+            transform: translateY(-5px);
+        }
+        .law-card h4 {
+            color: #00ff00;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        @media (max-width: 768px) {
+            .lesson-section h1 {
+                font-size: 2rem;
+            }
+            .lesson-section h2 {
+                font-size: 1.6rem;
+            }
+            .example-box h3 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+    </div>
+    <nav>
+        <div class="logo">FloryId Academy</div>
+        <div class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul>
+            <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="../materi.html" class="active"><i class="fas fa-book"></i> Materials</a></li>
+            <li><a href="../tools.html"><i class="fas fa-tools"></i> Tools</a></li>
+            <li><a href="../about.html"><i class="fas fa-info-circle"></i> About</a></li>
+            <li><a href="../contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="lesson-container">
+        <section class="lesson-section animate-on-scroll">
+            <h1>Aspek Hukum dalam Ethical Hacking</h1>
+            <p>Memahami kerangka hukum seputar ethical hacking sangat penting untuk menjaga integritas profesional dan menghindari komplikasi hukum. Panduan komprehensif ini mencakup pertimbangan hukum penting, regulasi, dan praktik terbaik.</p>
+
+            <div class="key-points">
+                <h3>Prinsip Hukum Utama:</h3>
+                <ul>
+                    <li>Otorisasi Tertulis</li>
+                    <li>Definisi Ruang Lingkup</li>
+                    <li>Perjanjian Kerahasiaan (NDA)</li>
+                    <li>Kepatuhan Perlindungan Data</li>
+                    <li>Persyaratan Dokumentasi</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="lesson-section animate-on-scroll">
+            <h2>Hukum dan Regulasi Internasional</h2>
+            <div class="law-card">
+                <h4>Computer Fraud and Abuse Act (CFAA)</h4>
+                <p>Undang-undang utama AS yang mengatur kejahatan komputer, melarang akses tidak sah ke komputer dan jaringan yang dilindungi.</p>
+            </div>
+            <div class="law-card">
+                <h4>General Data Protection Regulation (GDPR)</h4>
+                <p>Regulasi Uni Eropa tentang perlindungan data dan privasi, yang mempengaruhi bagaimana pengujian keamanan dapat dilakukan pada sistem yang berisi data warga UE.</p>
+            </div>
+            <div class="law-card">
+                <h4>Digital Millennium Copyright Act (DMCA)</h4>
+                <p>Undang-undang hak cipta AS yang dapat mempengaruhi penelitian keamanan dan pengungkapan kerentanan.</p>
+            </div>
+        </section>
+
+        <section class="lesson-section animate-on-scroll">
+            <h2>Sertifikasi dan Standar Profesional</h2>
+            <div class="example-box">
+                <h3>Sertifikasi yang Diperlukan</h3>
+                <ul>
+                    <li>Certified Ethical Hacker (CEH)</li>
+                    <li>CompTIA Security+</li>
+                    <li>OSCP (Offensive Security Certified Professional)</li>
+                    <li>CISSP (Certified Information Systems Security Professional)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="lesson-section animate-on-scroll">
+            <h2>Persyaratan Dokumentasi Hukum</h2>
+            <div class="key-points">
+                <h3>Dokumen Penting:</h3>
+                <ul>
+                    <li>Perjanjian Ruang Lingkup Kerja</li>
+                    <li>Perjanjian Kerahasiaan (NDA)</li>
+                    <li>Aturan Keterlibatan</li>
+                    <li>Otorisasi Pengujian</li>
+                    <li>Informasi Kontak Darurat</li>
+                    <li>Template Laporan Akhir</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="lesson-section animate-on-scroll">
+            <h2>Tanggung Jawab dan Asuransi</h2>
+            <p>Memahami tanggung jawab profesional dan persyaratan asuransi:</p>
+            <div class="example-box">
+                <h3>Pertimbangan Utama</h3>
+                <ul>
+                    <li>Asuransi Tanggung Jawab Profesional</li>
+                    <li>Perlindungan Asuransi Cyber</li>
+                    <li>Ganti Rugi Klien</li>
+                    <li>Klausul Pembatasan Kerusakan</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="lesson-section animate-on-scroll">
+            <h2>Pengungkapan yang Bertanggung Jawab</h2>
+            <div class="key-points">
+                <h3>Praktik Terbaik:</h3>
+                <ul>
+                    <li>Ikuti kebijakan pengungkapan organisasi</li>
+                    <li>Berikan waktu yang cukup untuk perbaikan</li>
+                    <li>Jaga kerahasiaan</li>
+                    <li>Dokumentasikan semua komunikasi</li>
+                    <li>Hindari pengungkapan publik sebelum perbaikan</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="lesson-section animate-on-scroll">
+            <h2>Studi Kasus Hukum</h2>
+            <div class="example-box">
+                <h3>Kasus-Kasus Penting</h3>
+                <p>Pelajari dari contoh dunia nyata tentang masalah hukum dalam ethical hacking:</p>
+                <ul>
+                    <li>Insiden pengujian tanpa izin</li>
+                    <li>Kasus pelanggaran ruang lingkup</li>
+                    <li>Contoh pengungkapan yang bertanggung jawab</li>
+                    <li>Skenario penanganan pelanggaran data</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 FloryId Academy. All rights reserved.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="../scroll-animations.js"></script>
+    <script>
+        window.addEventListener('load', function() {
+            document.body.classList.add('loaded');
+        });
+    </script>
+</body>
+</html>

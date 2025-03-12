@@ -6,17 +6,46 @@
 }
 
 .about-hero {
+    position: relative;
     text-align: center;
-    padding: 4rem 2rem;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80');
+    padding: 6rem 2rem;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('image/bug bpunty.jpeg');
     background-size: cover;
     background-position: center;
     color: white;
     margin-bottom: 3rem;
+    border-radius: 0 0 50px 50px;
+    z-index: 1;
 }
 
-.mission {
+.mission, .values, .team {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 3rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    z-index: 2;
+}
+
+.value-card {
+    background: rgba(255, 255, 255, 0.15);
     padding: 2rem;
+    border-radius: 10px;
+    margin: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    z-index: 2;
+}
+
+.team-member {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    z-index: 2;
     text-align: center;
     margin-bottom: 3rem;
 }

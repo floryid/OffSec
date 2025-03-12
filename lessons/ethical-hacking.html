@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is Ethical Hacking? - FloryId Academy</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../new-animations.css">
+    <link rel="stylesheet" href="../loader.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .lesson-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: rgba(0, 0, 0, 0.85);
+            min-height: 100vh;
+        }
+        .lesson-section ul li{
+            list-style: numeric;
+        }
+        
+        .lesson-section {
+            margin-bottom: 40px;
+            background: rgba(0, 255, 0, 0.3));
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(106, 100, 100, 0.782);
+            backdrop-filter: blur(10px);
+            color: #ffffff;
+        }
+        .lesson-section h1 {
+            color: #00ff00;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+        }
+        .lesson-section h2 {
+            color: #00ff00;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+        .lesson-section p {
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #ffffff;
+            font-size: 1.1rem;
+        }
+        .key-points {
+            background: rgba(0, 255, 0, 0.15);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 25px 0;
+            box-shadow: 0 4px 12px rgba(0, 255, 0, 0.1);
+        }
+        .key-points h3 {
+            color: #00ff00;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        .key-points ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .key-points ul li{
+            color: #ffffff;
+        }
+        .key-points li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+            color: #ffffff;
+            font-size: 1.1rem;
+        }
+        .key-points li:before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #00ff00;
+            font-weight: bold;
+        }
+        .example-box {
+            background: rgba(0, 0, 0, 0.85);
+            border-left: 4px solid #00ff00;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 4px 12px rgba(0, 255, 0, 0.15);
+        }
+        .example-box h3 {
+            color: #00ff00;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 8px rgba(0, 255, 0, 0.4);
+        }
+        .example-box p {
+            color: #ffffff;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+    </div>
+    <nav>
+        <div class="logo">FloryId Academy</div>
+        <div class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul>
+            <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="../materi.html" class="active"><i class="fas fa-book"></i> Materials</a></li>
+            <li><a href="../tools.html"><i class="fas fa-tools"></i> Tools</a></li>
+            <li><a href="../about.html"><i class="fas fa-info-circle"></i> About</a></li>
+            <li><a href="../contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="lesson-container">
+        <section class="lesson-section animate-on-scroll">
+            <h1>Apa itu Ethical Hacking?</h1>
+            <p>Ethical hacking, yang juga dikenal sebagai penetration testing atau white-hat hacking, adalah praktik pengujian sistem komputer, jaringan, dan aplikasi secara legal dan metodis untuk mengidentifikasi kerentanan keamanan yang dapat dieksploitasi oleh peretas jahat.</p>
+
+            <div class="key-points">
+                <h3>Konsep Utama:</h3>
+                <ul>
+                    <li>Otorisasi dan izin legal dari pemilik sistem</li>
+                    <li>Pendekatan sistematis untuk menemukan kerentanan</li>
+                    <li>Dokumentasi dan pelaporan temuan</li>
+                    <li>Pengungkapan kerentanan secara bertanggung jawab</li>
+                    <li>Perilaku etis dan integritas profesional</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="lesson-section animate-on-scroll">
+            <h2>Pentingnya Ethical Hacking</h2>
+            <p>Dalam lanskap digital saat ini, ethical hacking memainkan peran penting dalam:</p>
+            <ul>
+                <li>Melindungi data dan sistem sensitif</li>
+                <li>Mencegah kerugian finansial dari serangan siber</li>
+                <li>Menjaga kepercayaan pelanggan dan reputasi bisnis</li>
+                <li>Memastikan kepatuhan terhadap regulasi keamanan</li>
+                <li>Selalu berada selangkah di depan penjahat siber</li>
+            </ul>
+        </section>
+
+        <section class="lesson-section animate-on-scroll">
+            <h2>Jenis-Jenis Hacker</h2>
+            <div class="example-box">
+                <h3>White Hat Hackers</h3>
+                <p>Hacker etis yang bekerja dengan izin untuk meningkatkan keamanan</p>
+            </div>
+            <div class="example-box">
+                <h3>Black Hat Hackers</h3>
+                <p>Hacker jahat yang mengeksploitasi sistem untuk keuntungan pribadi atau merugikan</p>
+            </div>
+            <div class="example-box">
+                <h3>Grey Hat Hackers</h3>
+                <p>Beroperasi di area abu-abu, terkadang melanggar hukum tetapi tanpa niat jahat</p>
+            </div>
+        </section>
+
+        <section class="lesson-section animate-on-scroll">
+            <h2>Keterampilan Penting untuk Ethical Hackers</h2>
+            <div class="key-points">
+                <ul>
+                    <li>Pemrograman dan scripting (Python, Bash, PowerShell)</li>
+                    <li>Dasar-dasar jaringan (TCP/IP, protokol)</li>
+                    <li>Sistem operasi (Linux, Windows)</li>
+                    <li>Teknologi dan keamanan web</li>
+                    <li>Manajemen dan keamanan database</li>
+                    <li>Tools dan framework keamanan</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="lesson-section animate-on-scroll">
+            <h2>Metodologi Ethical Hacking</h2>
+            <p>Pendekatan sistematis untuk pengujian keamanan:</p>
+            <ol>
+                <li>Perencanaan dan Pengintaian</li>
+                <li>Pemindaian dan Enumerasi</li>
+                <li>Mendapatkan Akses</li>
+                <li>Mempertahankan Akses</li>
+                <li>Menghapus Jejak</li>
+                <li>Pelaporan</li>
+            </ol>
+        </section>
+
+        <section class="lesson-section animate-on-scroll">
+            <h2>Tools yang Digunakan</h2>
+            <div class="key-points">
+                <ul>
+                    <li>Nmap - Pemindaian dan penemuan jaringan</li>
+                    <li>Wireshark - Analisis protokol jaringan</li>
+                    <li>Metasploit - Framework pengujian penetrasi</li>
+                    <li>Burp Suite - Pengujian keamanan aplikasi web</li>
+                    <li>John the Ripper - Pemecahan password</li>
+                    <li>Aircrack-ng - Penilaian keamanan wireless</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="lesson-section animate-on-scroll">
+            <h2>Legal and Ethical Considerations</h2>
+            <p>Ethical hackers must:</p>
+            <ul>
+                <li>Obtain explicit permission before testing</li>
+                <li>Respect scope and boundaries</li>
+                <li>Protect confidential information</li>
+                <li>Report findings responsibly</li>
+                <li>Follow relevant laws and regulations</li>
+                <li>Maintain professional standards</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 FloryId Academy. All rights reserved.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="../scroll-animations.js"></script>
+    <script>
+        window.addEventListener('load', function() {
+            document.body.classList.add('loaded');
+        });
+    </script>
+</body>
+</html>

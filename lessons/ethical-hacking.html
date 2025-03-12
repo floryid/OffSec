@@ -23,7 +23,7 @@
         
         .lesson-section {
             margin-bottom: 40px;
-            background: rgba(0, 255, 0, 0.3));
+            background: rgba(0, 255, 0, 0.3);
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 8px 16px rgba(106, 100, 100, 0.782);
@@ -99,6 +99,50 @@
             font-size: 1.1rem;
             line-height: 1.6;
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        @media (max-width: 768px) {
+            .lesson-section {
+                padding: 20px;
+            }
+            .lesson-section h1 {
+                font-size: 2rem;
+            }
+            .lesson-section h2 {
+                font-size: 1.6rem;
+            }
+            .example-box h3 {
+                font-size: 1.4rem;
+            }
+            .key-points {
+                padding: 15px;
+            }
+            .key-points li {
+                font-size: 1rem;
+            }
+            .example-box {
+                padding: 15px;
+            }
+            .example-box p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .lesson-section h1 {
+                font-size: 1.8rem;
+            }
+            .lesson-section h2 {
+                font-size: 1.4rem;
+            }
+            .lesson-section p {
+                font-size: 1rem;
+            }
+            .key-points h3 {
+                font-size: 1.3rem;
+            }
+            .example-box h3 {
+                font-size: 1.3rem;
+            }
         }
     </style>
 </head>

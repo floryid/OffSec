@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Writing - FloryId Academy</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../animations.css">
+    <link rel="stylesheet" href="bug-bounty-platforms.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">FloryId Academy</div>
+        <div class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul>
+            <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="../materi.html" class="active"><i class="fas fa-book"></i> Materials</a></li>
+            <li><a href="../tools.html"><i class="fas fa-tools"></i> Tools</a></li>
+            <li><a href="../about.html"><i class="fas fa-info-circle"></i> About</a></li>
+            <li><a href="../contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="lesson-container">
+        <section class="lesson-section animate-on-scroll">
+            <h1>Report Writing</h1>
+            <p>Writing effective vulnerability reports is crucial for successful bug bounty hunting. A well-written report helps companies understand and fix security issues efficiently.</p>
+        </section>
+
+        <section class="lesson-section animate-on-scroll">
+            <h2>Report Structure</h2>
+            <div class="key-points">
+                <h3>Essential Components:</h3>
+                <ul>
+                    <li>Title - Clear and descriptive summary of the vulnerability</li>
+                    <li>Severity Rating - CVSS score with explanation</li>
+                    <li>Description - Technical details of the vulnerability</li>
+                    <li>Steps to Reproduce - Detailed reproduction steps</li>
+                    <li>Impact - Business and security implications</li>
+                    <li>Proof of Concept - Screenshots, videos, or code</li>
+                    <li>Mitigation - Suggested fixes or recommendations</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="lesson-section animate-on-scroll">
+            <h2>Example Report: XSS Vulnerability</h2>
+            <div class="example-box">
+                <h3>Title:</h3>
+                <p>Stored XSS in User Profile Bio Field Allows Arbitrary JavaScript Execution</p>
+
+                <h3>Severity: High (CVSS 8.2)</h3>
+                <p>Impact Metrics:</p>
+                <ul>
+                    <li>Attack Vector: Network</li>
+                    <li>Attack Complexity: Low</li>
+                    <li>Privileges Required: Low</li>
+                    <li>User Interaction: Required</li>
+                    <li>Scope: Changed</li>
+                    <li>Confidentiality: High</li>
+                    <li>Integrity: High</li>
+                    <li>Availability: None</li>
+                </ul>
+
+                <h3>Description:</h3>
+                <p>A stored Cross-Site Scripting (XSS) vulnerability was discovered in the user profile bio field. The application fails to properly sanitize user input, allowing attackers to inject and store malicious JavaScript code that executes when other users view the affected profile.</p>
+
+                <h3>Steps to Reproduce:</h3>
+                <ol>
+                    <li>Log in to the application</li>
+                    <li>Navigate to Profile Settings</li>
+                    <li>In the Bio field, insert the following payload:<br>
+                    <code>&lt;img src=x onerror="alert(document.cookie)"&gt;</code></li>
+                    <li>Save the profile</li>
+                    <li>When another user views the profile, the JavaScript code executes</li>
+                </ol>
+
+                <h3>Impact:</h3>
+                <p>This vulnerability allows attackers to:</p>
+                <ul>
+                    <li>Steal user session cookies</li>
+                    <li>Perform actions on behalf of other users</li>
+                    <li>Modify page content</li>
+                    <li>Redirect users to malicious sites</li>
+                </ul>
+
+                <h3>Proof of Concept:</h3>
+                <p>[Screenshots or video demonstration would be included here]</p>
+
+                <h3>Mitigation:</h3>
+                <p>Recommended fixes:</p>
+                <ul>
+                    <li>Implement proper input validation</li>
+                    <li>Use HTML encoding for user input</li>
+                    <li>Apply Content Security Policy (CSP) headers</li>
+                    <li>Consider using a security library like DOMPurify</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="lesson-section animate-on-scroll">
+            <h2>Example Report: SQL Injection</h2>
+            <div class="example-box">
+                <h3>Title:</h3>
+                <p>Time-Based SQL Injection in Search Function Allows Database Enumeration</p>
+
+                <h3>Severity: Critical (CVSS 9.1)</h3>
+                <p>Impact Metrics:</p>
+                <ul>
+                    <li>Attack Vector: Network</li>
+                    <li>Attack Complexity: Low</li>
+                    <li>Privileges Required: None</li>
+                    <li>User Interaction: None</li>
+                    <li>Scope: Changed</li>
+                    <li>Confidentiality: High</li>
+                    <li>Integrity: High</li>
+                    <li>Availability: High</li>
+                </ul>
+
+                <h3>Description:</h3>
+                <p>A time-based SQL injection vulnerability was identified in the product search functionality. The application fails to properly sanitize user input in the search parameter, allowing an attacker to execute arbitrary SQL queries through time-based inference techniques.</p>
+
+                <h3>Steps to Reproduce:</h3>
+                <ol>
+                    <li>Navigate to the product search page</li>
+                    <li>Insert the following payload in the search parameter:<br>
+                    <code>product' AND (SELECT CASE WHEN (username='admin') THEN pg_sleep(10) ELSE pg_sleep(0) END FROM users)--</code></li>
+                    <li>Observe that the application takes 10 seconds to respond when the condition is true</li>
+                </ol>
+
+                <h3>Impact:</h3>
+                <p>This vulnerability allows attackers to:</p>
+                <ul>
+                    <li>Extract sensitive data from the database</li>
+                    <li>Enumerate database structure</li>
+                    <li>Potentially modify or delete database contents</li>
+                    <li>Execute administrative database commands</li>
+                </ul>
+
+                <h3>Proof of Concept:</h3>
+                <p>[Screenshots of timing differences and data extraction would be included here]</p>
+
+                <h3>Mitigation:</h3>
+                <p>Recommended fixes:</p>
+                <ul>
+                    <li>Use parameterized queries</li>
+                    <li>Implement input validation</li>
+                    <li>Apply proper error handling</li>
+                    <li>Use an ORM with built-in SQL injection protection</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="lesson-section animate-on-scroll">
+            <h2>Report Writing Best Practices</h2>
+            <div class="key-points">
+                <h3>Tips for Effective Reports:</h3>
+                <ul>
+                    <li>Be clear and concise</li>
+                    <li>Include all necessary technical details</li>
+                    <li>Provide clear reproduction steps</li>
+                    <li>Explain real-world impact</li>
+                    <li>Use proper formatting and organization</li>
+                    <li>Include quality screenshots/videos</li>
+                    <li>Suggest realistic fixes</li>
+                    <li>Maintain professional tone</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 FloryId Academy. All rights reserved.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="../scroll-animations.js"></script>
+    <script>
+        window.addEventListener('load', function() {
+            document.body.classList.add('loaded');
+        });
+    </script>
+</body>
+</html>

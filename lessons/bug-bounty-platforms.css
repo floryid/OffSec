@@ -1,0 +1,174 @@
+/* Bug Bounty Platforms Page Styles */
+.lesson-container {
+    padding: 100px 20px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.lesson-section {
+    background: rgba(18, 18, 18, 0.95);
+    border-radius: 15px;
+    padding: 2.5rem;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #5af600;
+}
+.lesson-section h1 p{
+    color: #00ff00;
+}
+
+.lesson-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(31, 38, 135, 0.25);
+}
+
+.platform-section {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.platform-section:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(0, 255, 0, 0.2);
+}
+
+.key-points {
+    margin: 1.5rem 0;
+}
+
+.key-points h3 {
+    color: #00ff00;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.key-points ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.key-points li {
+    margin: 0.8rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: #ffffff;
+}
+
+.key-points li:before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #00ff00;
+}
+
+.example-box {
+    background: rgba(0, 255, 0, 0.05);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border: 1px solid rgba(0, 255, 0, 0.1);
+    color: #ffffff;
+}
+
+.example-box h3 {
+    color: #00ff00;
+    margin-bottom: 1.2rem;
+    font-size: 1.2rem;
+}
+
+.example-box h4 {
+    color: #ffffff;
+    margin: 1.5rem 0 0.8rem;
+    font-size: 1.1rem;
+}
+
+.example-box ul {
+    list-style: none;
+    padding-left: 1rem;
+}
+
+.example-box li {
+    margin: 0.6rem 0;
+    line-height: 1.6;
+}
+
+code {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    color: #00ff00;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .lesson-container {
+        padding: 80px 15px 30px;
+    }
+
+    .lesson-section {
+        padding: 2rem;
+    }
+
+    .platform-section {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .lesson-container {
+        padding: 70px 12px 25px;
+    }
+
+    .lesson-section {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .platform-section {
+        padding: 1.2rem;
+        margin: 1.5rem 0;
+    }
+
+    .key-points h3,
+    .example-box h3 {
+        font-size: 1.1rem;
+    }
+
+    .example-box h4 {
+        font-size: 1rem;
+    }
+
+    code {
+        font-size: 0.85rem;
+        word-break: break-all;
+    }
+}
+
+@media (max-width: 480px) {
+    .lesson-container {
+        padding: 60px 10px 20px;
+    }
+
+    .lesson-section {
+        padding: 1.2rem;
+    }
+
+    .platform-section {
+        padding: 1rem;
+    }
+
+    .key-points li,
+    .example-box li {
+        font-size: 0.95rem;
+    }
+}

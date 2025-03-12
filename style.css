@@ -47,6 +47,10 @@ nav {
         display: flex;
     }
 
+    nav {
+        padding: 1rem;
+    }
+
     nav::before {
         content: "";
         position: fixed;
@@ -67,35 +71,39 @@ nav {
     }
 
     nav ul {
-        display: none;
         position: fixed;
         top: 0;
         right: -100%;
-        width: 70%;
+        width: 80%;
+        max-width: 400px;
         height: 100vh;
         background-color: #1a1a1a;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
-        gap: 2rem;
-        transition: all 0.3s ease-in-out;
+        gap: 1rem;
+        transition: transform 0.3s ease-in-out;
         z-index: 999;
-        padding: 2rem;
+        padding-top: 4rem;
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+        overflow-y: auto;
+        display: flex;
+        transform: translateX(100%);
     }
 
     nav ul.active {
-        display: flex;
         right: 0;
+        transform: translateX(0);
     }
 
     nav ul li {
         margin: 1rem 0;
         opacity: 0;
         transform: translateX(50px);
-        transition: all 0.3s ease-in-out;
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
         width: 100%;
         text-align: center;
+        padding: 0 1rem;
     }
 
     nav ul.active li {

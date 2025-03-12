@@ -6,10 +6,15 @@
     <title>Course Materials - FloryId Academy</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="materi.css">
+    <link rel="stylesheet" href="new-animations.css">
+    <link rel="stylesheet" href="loader.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+    </div>
     <nav>
         <div class="logo">FloryId Academy</div>
         <div class="nav-toggle">
@@ -39,64 +44,42 @@
                 </div>
                 <div class="lesson-card">
                     <h3>1.2 Legal Aspects</h3>
-                    <p>Understanding the legal framework of ethical hacking</p>
+                    <p>Understand the legal framework of ethical hacking</p>
                     <a href="lessons/legal-aspects.html" class="lesson-btn">Start Lesson</a>
                 </div>
             </div>
         </div>
 
         <div class="module">
-            <h2>Module 2: Bug Bounty Basics</h2>
+            <h2>Module 2: Bug Bounty Hunting</h2>
             <div class="lessons">
                 <div class="lesson-card">
                     <h3>2.1 Bug Bounty Platforms</h3>
-                    <p>Introduction to popular bug bounty platforms</p>
+                    <p>Explore popular bug bounty platforms and opportunities</p>
                     <a href="lessons/bug-bounty-platforms.html" class="lesson-btn">Start Lesson</a>
                 </div>
                 <div class="lesson-card">
                     <h3>2.2 Report Writing</h3>
-                    <p>How to write effective bug reports</p>
+                    <p>Learn how to write effective vulnerability reports</p>
                     <a href="lessons/report-writing.html" class="lesson-btn">Start Lesson</a>
                 </div>
             </div>
         </div>
-        <div class="module">
-            <h2>Module 3: Cyber Kill Chain</h2>
-            <div class="lessons">
-                <div class="lesson-card">
-                    <h3>3.1 Understanding the Cyber Kill Chain</h3>
-                    <p>The Cyber Kill Chain is a model that describes the stages of a cyber attack:</p>
-                    <ul class="kill-chain-list">
-                        <li><strong>Reconnaissance:</strong> Gathering information about the target through various methods like OSINT, network scanning, and social engineering.</li>
-                        <li><strong>Weaponization:</strong> Preparing exploits and malicious payloads tailored to target vulnerabilities.</li>
-                        <li><strong>Delivery:</strong> Transmitting the weaponized payload to the target through methods like phishing emails or compromised websites.</li>
-                        <li><strong>Exploitation:</strong> Executing the exploit code to take advantage of vulnerabilities.</li>
-                        <li><strong>Installation:</strong> Installing malware or backdoors for persistent access.</li>
-                        <li><strong>Command & Control:</strong> Establishing communication channels for remote system control.</li>
-                        <li><strong>Actions on Objectives:</strong> Achieving the attack goals like data theft or system damage.</li>
-                    </ul>
-                    <a href="#" class="lesson-btn">Start Lesson</a>
-                </div>
-                <div class="lesson-card">
-                    <h3>3.2 Practical Examples</h3>
-                    <p>Real-world examples and case studies of the Cyber Kill Chain in action:</p>
-                    <div class="example-box">
-                        <h4>Example: Web Application Attack</h4>
-                        <ul>
-                            <li><strong>Reconnaissance:</strong> Using tools like Shodan to identify vulnerable web servers</li>
-                            <li><strong>Weaponization:</strong> Creating SQL injection payloads</li>
-                            <li><strong>Delivery:</strong> Submitting malicious input through web forms</li>
-                            <li><strong>Exploitation:</strong> Executing SQL injection to access database</li>
-                            <li><strong>Installation:</strong> Uploading web shells for persistence</li>
-                            <li><strong>C2:</strong> Using the web shell to control the server</li>
-                            <li><strong>Actions:</strong> Extracting sensitive data</li>
-                        </ul>
-                    </div>
-                    <a href="#" class="lesson-btn">Start Lesson</a>
-                </div>
-            </div>
-        </div>
     </main>
+
+    <script src="script.js"></script>
+    <script>
+        window.addEventListener('load', function() {
+            document.body.classList.add('loaded');
+        });
+
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('active');
+            this.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
 
     <footer>
         <p>&copy; 2024 FloryId Academy. All rights reserved.</p>
@@ -105,3 +88,5 @@
     <script src="script.js"></script>
 </body>
 </html>
+
+    
